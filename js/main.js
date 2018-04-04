@@ -151,21 +151,27 @@ $(function () {
             let prettyField = field.name.replace('form-', '');
 
 
-            if (field.value.length === 0 || typeof field.value === 'undefined') {
+            if(typeof field.value !== 'object') { //if we are not validating the data array (custom sections)
+                if (field.value.length === 0 || typeof field.value === 'undefined') {
 
-                let flag = $(`.form-validation[data-owner-name=${field.name}]`);
+                    let flag = $(`.form-validation[data-owner-name=${field.name}]`);
 
 
-                //turn the validation flags on!
-                flag
-                    .text(`Please, fill your ${prettyField}.`)
-                    .show();
 
-                flag.prev().attr('form-flagged-field', 'true'); //set parent attribute as flagged
 
-                formHasErrors = true;
-                console.log()
+                    //turn the validation flags on!
+                    flag
+                        .text(`Please, fill your ${prettyField}.`)
+                        .show();
+
+                    flag.prev().attr('form-flagged-field', 'true'); //set parent attribute as flagged
+
+                    formHasErrors = true;
+                    console.log()
+                }
             }
+
+
 
             //validate links
             if (field.name === 'form-url' || field.name === 'form-image-link' || field.name === 'form-linkedin') {
@@ -192,7 +198,6 @@ $(function () {
                     if(data.length === 0) {
                         let flag = $(`.form-validation[data-owner-name=${field.name}]`);
 
-                        console.log(flag);
                         flag
                             .text(`Please, type a correct ${prettyField} format.`)
                             .show();
