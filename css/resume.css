@@ -1,0 +1,100 @@
+main {
+    padding-top: 3rem;
+}
+
+.separator {
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.resume-title {
+    margin-bottom: 2rem;
+}
+
+.center-me {
+    margin: 0 auto;
+    display: block;
+
+}
+
+#resume-results {
+    margin-top: 5rem;
+}
+
+.list-img {
+    box-sizing: border-box;
+    font-size: 2rem;
+    margin-right: 2rem;
+
+    position: absolute;
+    top: 1.4rem;
+    left: 1.7rem;
+
+}
+
+.resume-builder-subtitle, .resume-builder-title {
+    margin-left: 4.6rem;
+}
+
+#resume-builder-init {
+    margin-bottom: 1rem;
+}
+
+.resume-picture {
+    margin-bottom: 2rem;
+
+    width: 80%;
+    max-width: 100%;
+    height: auto;
+}
+
+.resume-education, .resume-work-experience {
+    overflow-wrap: break-word;
+    margin-top: 1rem;
+}
+
+.resume-section-title {
+    margin-top: 2rem;
+}
+
+.resume {
+    padding: 2rem;
+    background-color: #f8fbf6;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.resume-close {
+    position: absolute;
+    top: 1rem;
+    right: 1.4rem;
+    font-size: 1.6rem;
+    color: silver;
+}
+
+#my-resumes-title {
+    margin-bottom: 2rem;
+}
+
+.list-group-item {
+    margin-bottom: 1rem;
+}
+
+.form-validation {
+    color: red !important;
+    font-weight: bold;
+    padding: .3rem;
+}
+
+/* ------------------------------------------------------------|
+| ADD TOPICS
+*-------------------------------------------------------------*/
+
+.add-item {
+    font-size: 2rem;
+    color: dodgerblue;
+
+    position: relative;
+    top:0.3rem;
+            box-sizing: border-box;
+}

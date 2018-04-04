@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Resume Builer</title>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <!--BOOTSTRAP (Header)-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!--FONT AWESOME-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css"
+          integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/resume.css">
+
+    <!--CUSTOM JS CODE-->
+
+    <script src="js/helper-functions.js"></script>
+
+    <script src="js/classes.js"></script>
+    <script src="js/main.js"></script>
+
+
+</head>
+<body>
+
+<header>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#">
+            <i class="far fa-file-alt" style="margin-right:.5rem;"></i>
+            JS Resume Builder</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <!--<li class="nav-item active">-->
+                <!--<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>-->
+                <!--</li>-->
+                <!--<li class="nav-item">-->
+                <!--<a class="nav-link" href="#">Link</a>-->
+                <!--</li>-->
+                <!--<li class="nav-item">-->
+                <!--<a class="nav-link disabled" href="#">Disabled</a>-->
+                <!--</li>-->
+            </ul>
+            <!--<form class="form-inline mt-2 mt-md-0">-->
+            <!--<input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">-->
+            <!--<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
+            <!--</form>-->
+        </div>
+    </nav>
+</header>
+
+<!-- Begin page content -->
+<main role="main" class="container">
+
+    <div class="row">
+        <div class="col-md-12">
+
+            <hr class="separator">
+
+            <!--RESUME BUILDER INIT-->
+
+            <div class="list-group" id="resume-builder-init">
+                <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1"><i class="fas fa-cogs list-img"></i><span class="resume-builder-subtitle">Resume Builder</span>
+                        </h5>
+
+                    </div>
+                    <p class="mb-1 resume-builder-subtitle">Kickstart your new career now!</p>
+
+
+                </a>
+
+            </div>
+
+            <!--RESUME BUILDER END-->
+
+            <div id="resume-builder">
+
+
+                <!--FORM-->
+
+
+                <form id="mainForm" action="#" method="post" data-form-id="0">
+
+                    <div class="form-group">
+                        <label for="form-name">Name</label>
+                        <input type="text" class="form-control" id="form-name" placeholder="Enter your name" data-form-flagged-field="false">
+                        <small class="form-text text-muted form-validation" data-owner-name="form-name"
+                               style="display: none"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="form-address">Address</label>
+                        <input type="text" class="form-control" id="form-address" placeholder="Enter your address" data-form-flagged-field="false">
+                        <small class="form-text text-muted form-validation" data-owner-name="form-address"
+                               style="display: none"></small>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="form-url">URL</label>
+                        <input type="text" class="form-control" id="form-url" placeholder="Enter your  URL" name="form-url" data-form-flagged-field="false">
+                        <small class="form-text text-muted form-validation" data-owner-name="form-url"
+                               style="display: none"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="form-image-link">Image Link</label>
+                        <input type="text" class="form-control" id="form-image-link"
+                               placeholder="Enter your image profile link" value="https://www.c7creative.com/wp-content/uploads/2015/05/Calvin.png"
+                               data-form-flagged-field="false">
+                        <small class="form-text text-muted form-validation" data-owner-name="form-image-link"
+                               style="display: none"></small>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="form-linkedin">Linked In</label>
+                        <input type="text" class="form-control" id="form-linkedin"
+                               placeholder="Enter your linkedin profile URL" value="http://linkedin.com/in/jonit-dev/"
+                               data-form-flagged-field="false">
+                        <small class="form-text text-muted form-validation" data-owner-name="form-linkedin"
+                               style="display: none"></small>
+                    </div>
+
+                    <!--<textarea data-form-flagged-field="false" name="form-education" id="form-education" cols="30" rows="10"-->
+                    <!--class="form-control" placeholder="Tell us about your education."></textarea>-->
+
+
+                    <div class="form-group">
+                        <label for="form-education">Education</label>
+
+
+                        <!--MULTILINE EDUCATION FIELDS-->
+
+                        <input type="text" class="form-control form-education"
+                               placeholder="" value=""
+                               data-form-flagged-field="false" style="
+                               width: 80%; display: inline-block; margin-left:1rem;"
+                                data-form-education-id="0"
+                               data-owner-id="0"
+                        >
+
+                        <i class="fas fa-plus-circle add-item" data-owner="education"></i>
+
+
+                        <small class="form-text text-muted form-validation" data-owner-name="form-education"
+                               style="display: none"></small>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="form-work">Work Experience</label>
+
+
+                        <!--MULTILINE EDUCATION FIELDS-->
+
+                        <input type="text" class="form-control form-work"
+                               placeholder="" value=""
+                               data-form-flagged-field="false" style="
+                               width: 70%; display: inline-block; margin-left:1rem;"
+                               data-form-education-id="0"
+                               data-owner-id="0"
+                        >
+
+                        <i class="fas fa-plus-circle add-item" data-owner="work"></i>
+
+
+                        <small class="form-text text-muted form-validation" data-owner-name="form-work"
+                               style="display: none"></small>
+                    </div>
+
+
+                    <div class="form-group">
+                        <a href="javascript:void(0)" id="custom-category">Add a custom section...</a>
+                    </div>
+
+
+
+                    <button type="submit" class="btn btn-primary center-me">Build Now</button>
+                </form>
+
+
+                <!--ENDFORM-->
+
+
+            </div>
+            <!--END RESUME BUILDER-->
+
+
+            <!--RESUME RESULTS-->
+
+
+            <div id="resume-results">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 id="my-resumes-title">My Resumes</h1>
+                    </div>
+                </div>
+
+
+                <div class="list-group">
+
+
+                    <!--END LIST GROUP-->
+                </div>
+
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+</main>
+
+
+<!--BOOTSTRAP (Footer)-->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>
